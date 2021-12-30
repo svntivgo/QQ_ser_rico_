@@ -3,6 +3,11 @@ import { questionnaire } from "../src/questionnaire.js";
 
 export let answer = []
 
+/**
+ * Prints on screen the question, answers and information like prize and level
+ * @param {number} number Number of the level to show on screen
+ * @param {function} validator Validates if answer is true or not
+ */
 export function level(number, validator) {
     let i = Math.floor(Math.random() * 5) + 0
     let main = document.getElementById('main');

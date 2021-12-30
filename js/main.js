@@ -5,21 +5,14 @@ import {
     game
 } from "./modules/game.js";
 import {
-    User
-} from "./models/user.js";
-import {
     getData
 } from "./controllers/getData.js";
 import {
-    questionnaire
-} from "./src/questionnaire.js";
-import {
-    level
-} from "./models/level.js";
-import {
     forfeit
 } from "./controllers/forfeit.js";
-import { history } from "./modules/history.js";
+import {
+    history
+} from "./modules/history.js";
 
 window.onload = () => {
     let userData = localStorage.getItem('QQ_ser_rico') ? JSON.parse(localStorage.getItem('QQ_ser_rico')) : [];
@@ -40,6 +33,10 @@ window.onload = () => {
         history()
     })
 
+    /**
+     * Allows validation of local data
+     * Starts the game when the user press CONTINUAR
+     */
     startButton.addEventListener('click', () => {
         if (userData.length === 0 && userId.value != "" && userId.value != "") {
             getData(userData, userId, username);
