@@ -1,3 +1,7 @@
+/**
+ * Changes the color of the selected answer by player
+ * CASE/PROBLEM
+ */
 export function answerSelection() {
 
     for (let i = 0; i <= 4; i++) {
