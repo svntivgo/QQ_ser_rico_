@@ -2,6 +2,10 @@ import { mainButton } from "../models/button.js";
 import { eraser } from "../models/eraser.js";
 import { userCard } from "../models/userCard.js";
 
+/**
+ * Prints recorded local data of players on screen
+ * CASE/PROBLEM
+ */
 export function history() {
     let user = []
     let arrayUsers = JSON.parse(localStorage.getItem('QQ_ser_rico'))
