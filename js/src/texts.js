@@ -3,7 +3,3 @@ export let rules = `Bienvenido $username, la dinámica consta de cinco niveles, 
     Instrucciones: Leer la pregunta, posteriormente seleccionar la respuesta que creas correcta, por último, hacer click en el botón "Enviar respuesta".`
 
 export let msj = `¡Buena suerte!`
-
-export let congrats = `¡Enhorabuena $user!, has respondido correctamente todas las preguntas. Tu premio es de $prize`
-
-export let thanks = `¡Gracias por participar!`
