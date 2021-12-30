@@ -23,9 +23,6 @@ import {
 import {
     win
 } from "../controllers/win.js";
-import {
-    answerSelection
-} from "./selected.js";
 
 export function game() {
 
@@ -49,11 +46,15 @@ export function game() {
     let startButton = document.getElementById('main__button-1');
     let counter = 0
 
-
+    /**
+     * When user clicks CONTINUAR on second screen, prints question and answers
+     * Execute Win screen, Lose screen, Forfeit screen, case/problem
+     * Prints prize ammount on screen
+     */
     startButton.addEventListener('click', () => {
 
         if (counter > 0 && counter != 5 && JSON.parse(localStorage.getItem('answer')) == true) {
-            user[user.length - 1].prize += questionnaire[counter - 1].prize
+            user[user.length - 1].prize += questionnaire[counter - 1].prize /**SUM of user prize + level prize */
             localStorage.setItem('QQ_ser_rico', JSON.stringify(user))
             level(counter, results)
             for (let i = 0; i < 4; i++) {
