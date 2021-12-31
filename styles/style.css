@@ -115,10 +115,10 @@ header h1 {
 .main .main__answers .main__answer {
   width: 40%;
   margin: 1rem;
+  padding: 1rem;
   font-size: 1.5rem;
   text-align: center;
   color: #fff;
-  line-height: 5rem;
   background-color: #572EE5;
   border: 2px solid #572EE5;
   border-radius: 1rem;
@@ -175,6 +175,16 @@ header h1 {
 .main#main__bottom .main__forfeit:hover {
   background-color: #F3F5F8;
   color: #000;
+}
+
+@media screen and (max-width: 1024px) {
+  .main p {
+    text-align: left;
+    padding: 0 3rem;
+  }
+  .main .main__container .card {
+    width: 75vw;
+  }
 }
 
 footer {
