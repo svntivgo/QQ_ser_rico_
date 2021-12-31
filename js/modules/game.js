@@ -65,13 +65,12 @@ export function game() {
             return
         }
         if (counter > 0 && counter <= 5 && JSON.parse(localStorage.getItem('answer')) == false) {
-            window.location.reload();
             lose(startButton)
         } else if (counter <= 4 && counter < 1) {
             level(counter, results)
             counter++
             return
-        } else if (counter <= 5){
+        } else if (counter >= 5){
             win()
             startButton.innerHTML = 'INICIO'
             counter++
