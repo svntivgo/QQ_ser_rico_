@@ -1,5 +1,3 @@
-// import { mainButton } from "../models/button";
-
 /**
  * Changes the color of the selected answer by player
  * CASE/PROBLEM
