@@ -59,20 +59,18 @@ export function game() {
             level(counter, results)
             for (let i = 0; i < 4; i++) {
                 document.getElementById(i).classList.remove('selected')
-
             }
             counter++
             return
-        }
-        if (counter > 0 && counter <= 5 && JSON.parse(localStorage.getItem('answer')) == false) {
-            lose(startButton)
-        } else if (counter <= 4 && counter < 1) {
+        } else if (counter < 1) {
             level(counter, results)
             counter++
             return
-        } else if (counter >= 5){
-            win()
+        } else if (counter > 0 && counter <= 4 && JSON.parse(localStorage.getItem('answer')) === false) {
+            lose(startButton)
+        } else if (counter === 5) {
             startButton.innerHTML = 'INICIO'
+            win()
             counter++
             return
         }
