@@ -113,7 +113,7 @@ header h1 {
 }
 
 .main .main__answers .main__answer {
-  width: 40%;
+  width: 40vw;
   margin: 1rem;
   padding: 1rem;
   font-size: 1.5rem;
@@ -183,6 +183,9 @@ header h1 {
     padding: 0 3rem;
   }
   .main .main__container .card {
+    width: 75vw;
+  }
+  .main .main__answers .main__answer {
     width: 75vw;
   }
 }
