@@ -162,7 +162,7 @@ export const questionnaire = [{
                 options: [
                     {
                         text: "Inglés",
-                        value: false
+                        value: true
                     },
                     {
                         text: "Hebreo",
@@ -174,7 +174,7 @@ export const questionnaire = [{
                     },
                     {
                         text: "Mandarín",
-                        value: true
+                        value: false
                     }
                 ]
             },

@@ -14,11 +14,12 @@ export function win() {
     });
 
     user[user.length - 1].achievement = "Ganador"
+
+    user[user.length - 1].prize += questionnaire[questionnaire.length - 1].prize
+
     localStorage.setItem('QQ_ser_rico', JSON.stringify(user))
 
-    let lastPrize = questionnaire[questionnaire.length - 1].prize + user[user.length - 1].prize
-
-    let congrats = `¡Felicitaciones ${user[user.length - 1].username}!, has respondido correctamente todas las preguntas, tienes un premio acumulado de $${lastPrize}`
+    let congrats = `¡Felicitaciones ${user[user.length - 1].username}!, has respondido correctamente todas las preguntas, tienes un premio acumulado de $${user[user.length - 1].prize}`
 
     let msj = `¡Gracias por participar!`
 

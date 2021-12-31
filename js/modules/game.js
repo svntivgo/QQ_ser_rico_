@@ -53,7 +53,7 @@ export function game() {
      */
     startButton.addEventListener('click', () => {
 
-        if (counter > 0 && counter != 5 && JSON.parse(localStorage.getItem('answer')) == true) {
+        if (counter > 0 && counter <= 4 && JSON.parse(localStorage.getItem('answer')) == true) {
             user[user.length - 1].prize += questionnaire[counter - 1].prize /**SUM of user prize + level prize */
             localStorage.setItem('QQ_ser_rico', JSON.stringify(user))
             level(counter, results)
@@ -64,15 +64,17 @@ export function game() {
             counter++
             return
         }
-        if (counter > 0 && counter != 5 && JSON.parse(localStorage.getItem('answer')) == false) {
+        if (counter > 0 && counter <= 5 && JSON.parse(localStorage.getItem('answer')) == false) {
             lose(startButton)
-        } else if (counter != 5 && counter < 1) {
+        } else if (counter <= 4 && counter < 1) {
             level(counter, results)
             counter++
             return
-        } else {
+        } else if (counter >= 5){
             win()
             startButton.innerHTML = 'INICIO'
+            counter++
+            return
         }
     })
 

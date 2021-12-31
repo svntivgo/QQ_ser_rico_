@@ -62,7 +62,8 @@ export function level(number, validator) {
     `);
     document.getElementById('main__forfeit').style.display = 'block'
     validator(questionOptions)
+    answerSelection(number)
+
     JSON.stringify(localStorage.setItem('answer', ""))
-    answerSelection()
 }
 
