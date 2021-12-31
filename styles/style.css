@@ -45,6 +45,13 @@ header h1 {
   font-size: 6rem;
 }
 
+@media screen and (max-width: 1024px) {
+  header h1 {
+    padding: 3rem 1rem;
+    font-size: 4rem;
+  }
+}
+
 .main p {
   font-size: 1.6rem;
   line-height: 3rem;
